@@ -17,7 +17,7 @@ def main(test_reviews_file, test_labels_pred_file):
     test_labels_pred = pd.DataFrame({'sentiment': y_pred})
     mapping = {1: 'Positive', 0: 'Negative'}
     test_labels_pred['sentiment'] = test_labels_pred['sentiment'].map(mapping)
-    test_labels_pred.to_csv(test_labels_pred_file)
+    test_labels_pred.to_csv(test_labels_pred_file, index=False)
 
 
 if __name__ == "__main__":
